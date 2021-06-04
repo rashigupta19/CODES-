@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="cc" class="com.ncu.project.LoanOrganizationSystem.NewLoanApply">
+		<property name="Fullname" value="Rashi" />
+		<property name="Age" value="19" />
+		<property name="add" ref="address"/>
+		<property name="pi" ref="personalInfo"/>
+		<property name="PhNo" value="9967854345" />
+		<property name="email" value="rashi123@gmail.com"/>
+		<property name="Education" value="graduate"/>
+    	
+	</bean>
+
+	<bean id="address" class="com.ncu.project.LoanOrganizationSystem.Address">
+		<property name="hno" value="hno-2334" />
+		<property name="city" value="Gurgaon" />
+		<property name="state" value="Haryana"/>
+		<property name="pincode" value="122003"/>
+	</bean>
+
+	<bean id="personalInfo" class="com.ncu.project.LoanOrganizationSystem.PersonalInfo">
+		<property name="Salary" value="1000000" />
+		<property name="Aadhar" value="3234 5467 6789"/>
+		<property name="Pan" value="45678"/>
+		<property name="Assets">
+			<map>
+				<entry key="Investement" value="40000" />
+				<entry key="Real-estate" value="100000" />
+				<entry key="Cars" value="50000" />
+			</map>
+		</property>
+		<property name="Liability">
+			<map>
+				<entry key="Student Loan" value="25000" />
+				<entry key="Mortgages" value="20000" />
+				
+			</map>
+		</property>
+	</bean>
+	
+	
+
+
+</beans>
