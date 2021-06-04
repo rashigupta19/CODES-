@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+   <bean id="cc"  class="com.ncu.setters.CricketCoach">
+   <property  name="ifortune" ref="fortune"/>
+   <property  name="name" value="Rashi"/>
+	<property  name="email" value="rashi@123"/>
+	<property name="team_name"  value="Champions"/>
+	<property name="add"  ref="address"/>
+	</bean>
+	
+	<bean id="fortune" class="com.ncu.setters.Fortune">
+	</bean>
+	
+	
+	   <bean id="address"  class="com.ncu.setters.Address">
+	<property  name="hno"  value="123"/>
+	<property  name="city" value="Gurgaon"/>
+	<property name="state"  value="Haryana"/>
+	<property name="pincode"  value="122003"/>
+	</bean>
+</beans>
+
+
+	
+  
+    
+    
+    

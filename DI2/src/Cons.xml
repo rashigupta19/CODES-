@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean id="obj3" class="com.ncu.constructor.Baseball">
+		<property name="ifortune" ref="fortune1" />
+	</bean>
+
+
+	<bean id="fortune1" class="com.ncu.constructor.Fortune">
+	</bean>
+	
+	
+	<bean id="cc"  class="com.ncu.constructor.CricketCoach">
+	<constructor-arg  name="name" type="java.lang.String" value="Rashi"></constructor-arg>
+	<constructor-arg  name="email" type="java.lang.String" value="rashi@123"></constructor-arg>
+	<constructor-arg  name="team_name" type="java.lang.String" value="Champions"></constructor-arg>
+	</bean>
+</beans>
